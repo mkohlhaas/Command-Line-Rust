@@ -4,8 +4,6 @@
 
 This is the code repository for the [_Command-Line Rust_](https://learning.oreilly.com/library/view/command-line-rust/9781098109424/) with the `clap derive` mechanism. `clap` also offers a builder pattern approach (see the [original repository](https://github.com/kyclark/command-line-rust) for that).
 
-
-
 The Clap derive API is overwhelmingly considered the more idiomatic approach for modern Rust applications.
 
 According to the official [clap documentation FAQ](https://docs.rs/clap/latest/clap/_faq/index.html), the derive API is the recommended default. It leverages Rust's powerful type system to maps command-line arguments directly to a strongly-typed struct or enum.
