@@ -23,15 +23,6 @@ struct Args {
     lines: u64,
 }
 
-// --------------------------------------------------
-fn main() {
-    if let Err(e) = run(Args::parse()) {
-        eprintln!("Error: {e}");
-        std::process::abort();
-    }
-}
-
-// --------------------------------------------------
 fn run(args: Args) -> Result<()> {
     let mut file = File::create(&args.outfile)?;
     for _ in 0..args.lines {
@@ -53,7 +44,6 @@ fn run(args: Args) -> Result<()> {
     Ok(())
 }
 
-// --------------------------------------------------
 fn random_string() -> String {
     let length = rand::thread_rng().gen_range(2..8);
     rand::thread_rng()
@@ -61,4 +51,11 @@ fn random_string() -> String {
         .take(length)
         .map(char::from)
         .collect()
+}
+
+fn main() {
+    if let Err(e) = run(Args::parse()) {
+        eprintln!("Error: {e}");
+        std::process::abort();
+    }
 }
