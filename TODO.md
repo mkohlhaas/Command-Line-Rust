@@ -1,0 +1,1 @@
+- rewrite echor with goldenfile crate
