@@ -3,7 +3,7 @@
 for d in $(find -name Cargo.toml); do
   pushd .
   cd $(dirname $d)
-  cargo test
+  cargo clippy
   popd
 done
 

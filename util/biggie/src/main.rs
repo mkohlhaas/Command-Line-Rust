@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::Parser;
-use rand::{distributions::Alphanumeric, Rng};
+use rand::{Rng, distributions::Alphanumeric};
 use std::{fs::File, io::Write};
 use thousands::Separable;
 

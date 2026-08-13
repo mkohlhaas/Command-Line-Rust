@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-for DIR in [01]*; do
-    DIRNAME=$(basename "$DIR")
-    echo "==> $DIRNAME <=="
-    (cd $DIR && cargo fmt )
+for d in $(find -name Cargo.toml); do
+  pushd .
+  cd $(dirname $d)
+  cargo fmt
+  popd
 done
 
-echo "Done formatting!"
+echo "Done."
