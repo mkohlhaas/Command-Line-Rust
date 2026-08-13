@@ -1,0 +1,11 @@
+[package]
+name = "echor-golden-file"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+assert_cmd = { version = "2.2.2", features = ["color"] }
+clap = { version = "4.6.6", features = ["derive"] }
+goldenfile = "1.11.0"
+predicates = "3.1.4"

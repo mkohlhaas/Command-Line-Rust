@@ -4,8 +4,6 @@ use predicates::prelude::*;
 use pretty_assertions::assert_eq;
 use std::fs;
 
-// NOTE: this is actually goldenfile testing
-// you could use [crate goldenfile](https://crates.io/crates/goldenfile)
 fn run(args: &[&str], expected_file: &str) -> Result<()> {
     let expected = fs::read_to_string(expected_file)?;
     let output = Command::cargo_bin("echor")?
