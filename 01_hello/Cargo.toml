@@ -7,5 +7,13 @@ authors = [ "Ken Youens-Clark <kyclark@gmail.com>" ]
 [dependencies]
 
 [dev-dependencies]
-assert_cmd = "2.0.13"
-pretty_assertions = "1.4.0"
+assert_cmd = "2.2.2"
+pretty_assertions = "1.4.1"
+
+[[bin]]
+name="false"
+path="./src/bin/false.rs"
+
+[[bin]]
+name="true"
+path="./src/bin/true.rs"

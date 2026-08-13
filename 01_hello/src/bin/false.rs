@@ -1,3 +1,3 @@
 fn main() {
-  std::process::abort();
+    std::process::abort();
 }
